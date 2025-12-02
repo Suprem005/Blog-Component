@@ -69,6 +69,7 @@ const BlogLists = ({ title, description, position, blogs }: BlogListProps) => {
       {/* blog card details  */}
       <div
         className={cn(
+          
           'gap-4',
           view === 'grid'
             ? 'grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4'
