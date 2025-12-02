@@ -51,7 +51,7 @@ const BlogPage = () => {
     <div className='container mx-auto py-10'>
       <BlogLists
         title='Latest Blogs'
-        position='bottom'
+        position='top'
         blogs={blogsData}
         description='A supercar is a high‑performance sports vehicle built for speed, precision, and luxury. Featuring powerful engines, lightweight materials, and advanced aerodynamics, it delivers thrilling acceleration and handling. Beyond performance, supercars symbolize exclusivity and innovation, blending cutting‑edge technology with striking design to create an aspirational driving experience admired worldwide.'
       />

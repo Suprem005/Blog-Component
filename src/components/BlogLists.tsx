@@ -26,12 +26,14 @@ const BlogLists = ({ title, description, position, blogs }: BlogListProps) => {
   return (
     <section className='space-y-10'>
       {/* title  */}
-      <div className='flex flex-wrap justify-between'>
-        <h1 className='text-5xl font-bold'>{title}</h1>
+      <div className='flex flex-wrap justify-between items-center'>
+        <h1 className='text-3xl sm:text-5xl font-bold'>{title}</h1>
 
         {/* for positioning view all at top  */}
         {position === 'top' && (
-          <div className='flex justify-end'>
+          <div
+            className={cn('mt-4 sm:mt-0', 'flex justify-center sm:justify-end')}
+          >
             <Button variant='secondary' asChild>
               <a
                 target='blank'
@@ -46,7 +48,7 @@ const BlogLists = ({ title, description, position, blogs }: BlogListProps) => {
 
       {/* header description  */}
       <div>
-        <p className='text-md text-justify'>{description}</p>
+        <p className='text-md sm:text-lg text-justify'>{description}</p>
       </div>
 
       {/* toggling views  */}
@@ -69,10 +71,9 @@ const BlogLists = ({ title, description, position, blogs }: BlogListProps) => {
       {/* blog card details  */}
       <div
         className={cn(
-          
-          'gap-4',
+          'gap-8',
           view === 'grid'
-            ? 'grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4'
+            ? 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4'
             : 'flex flex-col'
         )}
       >
@@ -88,7 +89,7 @@ const BlogLists = ({ title, description, position, blogs }: BlogListProps) => {
             <div
               className={cn(
                 'relative w-full h-48',
-                view === 'list' && 'w-48 h-32'
+                view === 'list' && 'w-48 h-32 sm:w-48 sm:h-32'
               )}
             >
               <Image
@@ -111,7 +112,7 @@ const BlogLists = ({ title, description, position, blogs }: BlogListProps) => {
       </div>
 
       {position === 'bottom' && (
-        <div className='flex justify-center'>
+        <div className='flex justify-center sm:justify-center mt-6'>
           <Button variant='secondary' asChild>
             <a
               target='blank'
